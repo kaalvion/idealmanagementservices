@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Ideal Management Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fed65b",
+                    "primary": "#00361a",
+                    "on-secondary-container": "#745c00",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#00210e",
+                    "primary-fixed": "#b8f0c5",
+                    "inverse-primary": "#9dd3aa",
+                    "on-primary-fixed-variant": "#1d5031",
+                    "on-tertiary-fixed": "#00210c",
+                    "tertiary-fixed-dim": "#4de082",
+                    "primary-container": "#1a4d2e",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "outline": "#717971",
+                    "on-primary-container": "#88bd95",
+                    "on-secondary-fixed-variant": "#574500",
+                    "deep-forest": "#1A4D2E",
+                    "secondary-fixed": "#ffe088",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-container": "#2fca6e",
+                    "surface-dim": "#d9dadb",
+                    "on-surface": "#191c1d",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed": "#6dfe9c",
+                    "surface-tint": "#366847",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container": "#edeeef",
+                    "smoke-accent": "#E9ECEF",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c1c9bf",
+                    "inverse-surface": "#2e3132",
+                    "warm-gold": "#D4AF37",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#003617",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#414942",
+                    "tertiary-container": "#004f25",
+                    "on-tertiary-fixed-variant": "#005227",
+                    "primary-fixed-dim": "#9dd3aa",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#735c00",
+                    "on-background": "#191c1d",
+                    "slate-text": "#2D3436",
+                    "safety-lime": "#4ADE80",
+                    "inverse-on-surface": "#f0f1f2",
+                    "background": "#f8f9fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "element-gap": "16px",
+                    "stack-margin": "32px",
+                    "section-padding": "80px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .diffusion-shadow {
+            box-shadow: 0px 4px 20px rgba(26, 77, 46, 0.06);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 10px 30px rgba(26, 77, 46, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- Top Utility Bar -->
+<div class="hidden md:flex bg-primary text-white h-10 items-center justify-between px-8 text-label-sm font-label-sm">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>PAN India Support: 1800-XXX-XXXX</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>info@idealmanagementservices.com</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="opacity-80">Certified ISO 9001:2015</span>
+</div>
+</div>
+<!-- TopAppBar -->
+<header class="bg-surface fixed top-0 md:top-10 w-full z-50 border-b border-outline-variant shadow-sm flex justify-between items-center h-16 px-4 md:px-8">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-deep-forest">
+            Ideal Management
+        </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors px-3 py-2 rounded-lg" href="#">Home</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors px-3 py-2 rounded-lg" href="#">Services</a>
+<a class="text-primary font-bold px-3 py-2" href="#">About Us</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors px-3 py-2 rounded-lg" href="#">Case Studies</a>
+<a class="bg-warm-gold text-deep-forest font-bold px-6 py-2 rounded-full active:scale-95 duration-200" href="#">Call Now</a>
+</nav>
+<button class="md:hidden p-2 text-primary active:scale-95 duration-200" id="drawer-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Mobile Navigation Drawer Overlay -->
+<div class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity" id="drawer-overlay"></div>
+<!-- NavigationDrawer -->
+<aside class="fixed inset-y-0 left-0 w-80 z-[60] bg-surface-container-low flex flex-col h-full shadow-2xl -translate-x-full transition-all duration-300 ease-in-out" id="drawer">
+<div class="p-6 border-b border-outline-variant">
+<div class="font-headline-sm text-headline-sm text-deep-forest font-bold">Pro-Shield Hygiene System</div>
+</div>
+<nav class="flex flex-col py-4 flex-grow">
+<a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">pest_control</span> Services
+            </a>
+<a class="bg-primary-container text-on-primary-container rounded-r-full py-3 px-6 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">business_center</span> About Us
+            </a>
+<a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">analytics</span> Case Studies
+            </a>
+<a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">mail</span> Contact
+            </a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-warm-gold text-deep-forest font-bold py-3 rounded-xl active:scale-95 transition-transform" id="drawer-close">Close Menu</button>
+</div>
+</aside>
+<main class="pt-24 md:pt-32">
+<!-- Hero Section -->
+<section class="relative h-[60vh] md:h-[70vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLt0ab6g-3G5Yv0iHawHTU_aBjep8iaAGN-j9h7wMXrmcWEbKBXtYuDmpnL7KTsfAeJ_TjJvJUGuqZHVeG0fVlcQ-2UD3Ac-Vumy0xhVw2_KmkbqhiHf56ZI33tDlWVH6rqduxdnCcmmKaS7l42gN9msKZMKPYlwkwZIPqxSXJvd471BEiJDQ6WtT-Vw_b_wrCqPVv2B-A3rNqm5lbqXpWGip3d4vZUfjTPUS3fz00CZbkCd8f_5mYYrxMc')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
+</div>
+<div class="container mx-auto px-4 md:px-8 relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block bg-safety-lime/20 text-safety-lime px-4 py-1 rounded-full font-label-bold text-label-bold mb-6">ESTABLISHED 2016</span>
+<h1 class="font-display-lg text-[40px] md:text-display-lg text-white mb-6 leading-tight">Pioneering Hygiene Excellence</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-2xl">A legacy of meticulous pest management and environmental responsibility, serving the nation's most critical facilities with technical precision.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-warm-gold text-deep-forest font-bold px-8 py-4 rounded-full active:scale-95 transition-all shadow-lg hover:shadow-warm-gold/20">Get Expert Advice</button>
+<button class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-all">Our Credentials</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 1: Our Journey -->
+<section class="py-20 md:py-section-padding bg-surface">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-[0.83] rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Expert consultation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtfcDxfkqMHVJVxYFd_L3x_ZDy6jHam1JNBfnYeCJWRTDQSqCzECho2kQdQGwbEhCgz_tEyACcyWpg61pQp0_vzEvGNXNv241GyKlvEOTaKUpMPLdDhRpG3quYguHsYF2tJadztrRurGTqZ5LXzFrfIYVc65TbkalKNynSOezm89stJFHP30E-oZl4Herv7unD-cCHkNjJjgsQJv3BjX1D9PDg3_fPQkXqClfoMPm49VRLyw0v65_h2yUQ"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl diffusion-shadow hidden lg:block">
+<div class="text-deep-forest font-bold text-4xl mb-1">8+ Years</div>
+<div class="text-on-surface-variant font-label-bold">Of Unwavering Commitment</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="font-headline-md text-headline-md text-deep-forest">Our Journey Since 2016</h2>
+<div class="w-20 h-1.5 bg-safety-lime rounded-full mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Founded on the principles of integrity and clinical precision, Ideal Management Services has evolved into a powerhouse of Integrated Pest Management across PAN India.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            What started as a specialized hygiene unit has expanded into a multi-city operation, driven by our unwavering commitment to quality. We don't just treat pests; we engineer ecosystems that are safe, hygienic, and sustainable for future generations.
+                        </p>
+<div class="grid grid-cols-2 gap-6 pt-6">
+<div class="border-l-4 border-safety-lime pl-4">
+<div class="font-bold text-2xl text-primary">500+</div>
+<div class="text-label-bold text-on-surface-variant">Clients Served</div>
+</div>
+<div class="border-l-4 border-safety-lime pl-4">
+<div class="font-bold text-2xl text-primary">24/7</div>
+<div class="text-label-bold text-on-surface-variant">Support Core</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: The Ideal Edge (Bento Style) -->
+<section class="py-20 md:py-section-padding bg-surface-container-low">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-deep-forest mb-4">The Ideal Edge</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our systematic approach separates us from the standard service providers.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Integrated Pest Management -->
+<div class="md:col-span-2 bg-white p-8 rounded-2xl diffusion-shadow card-hover transition-all flex flex-col justify-between border border-smoke-accent">
+<div>
+<div class="w-14 h-14 bg-safety-lime/15 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">shield_with_heart</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-deep-forest mb-4">Integrated Pest Management (IPM)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">We utilize advanced IPM strategies that combine biological, cultural, and mechanical controls to minimize chemical usage while maximizing long-term results.</p>
+</div>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-label-bold text-primary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-safety-lime">check_circle</span> Eco-Friendly Methodology</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-safety-lime">check_circle</span> Preventive Analytics</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-safety-lime">check_circle</span> Habitat Modification</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-safety-lime">check_circle</span> Selective Treatments</li>
+</ul>
+</div>
+<!-- Technical Excellence -->
+<div class="bg-primary p-8 rounded-2xl shadow-xl card-hover transition-all text-white border border-primary-container">
+<div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-safety-lime text-3xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4">Technical Excellence</h3>
+<p class="font-body-md text-body-md text-white/80">Every technician is board-certified and undergoes rigorous 100-hour quarterly training to master the latest pest biology and chemical safety protocols.</p>
+</div>
+<!-- Continuous Support -->
+<div class="bg-white p-8 rounded-2xl diffusion-shadow card-hover transition-all border border-smoke-accent">
+<div class="w-14 h-14 bg-safety-lime/15 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-deep-forest mb-4">Continuous Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Post-treatment monitoring and rapid response teams ensure your facility remains a zero-pest zone around the clock.</p>
+</div>
+<!-- Specialized Warranty -->
+<div class="md:col-span-2 bg-warm-gold/10 p-8 rounded-2xl border-2 border-dashed border-warm-gold/30 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-grow">
+<h3 class="font-headline-sm text-headline-sm text-deep-forest mb-2">Legal Quality Assurance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We provide a unique <strong>Warranty on Stamp Paper</strong> for all specialized Termite treatments, giving you legal peace of mind.</p>
+</div>
+<div class="shrink-0">
+<div class="bg-warm-gold text-deep-forest font-bold px-6 py-3 rounded-lg shadow-md">
+                                Stamp Paper Warranty
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Diverse Expertise -->
+<section class="py-20 md:py-section-padding bg-surface">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-md text-headline-md text-deep-forest mb-4">Diverse Expertise</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Engineered solutions for every environment, from high-rise corporate hubs to sensitive industrial plants.</p>
+</div>
+<div class="hidden md:block">
+<span class="text-label-bold text-primary font-bold uppercase tracking-widest border-b-2 border-safety-lime pb-1">Industry Solutions</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Residential -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden diffusion-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A luxurious modern residential living room with clean white walls and expansive glass windows, looking pristine and safe, emphasizing a hygienic living space. Professional soft lighting, premium aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSJIVvsrLembaJsTQ7DYteFlv1q1X8wPyY_6E33M-9CVp0GwIVnk5v2SE6Q-PBSQG4fJjstWylOSTyLaJQJRj89G9mRnshFZw2KapoxIL9RllEUFFs18zC5FD_djjnNEJOWIUC3-Osn_nrQhEoXanAUyLuTCho5Zgvyrc_TlCxZvxhnQLG0BekDSQr7GCHeJVX8XnduIA-6gzP1gxHSlOMRZ89S7FkiFD04l0m9_-wlV6206a3Ajue')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white font-headline-sm text-headline-sm mb-1">Residential</h4>
+<p class="text-white/70 text-sm">Safe for pets and families.</p>
+</div>
+</div>
+<!-- Commercial -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden diffusion-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A professional high-end corporate office lobby with polished marble floors, glass partitions, and modern architectural elements, representing a clean and pest-free commercial environment. High-key clinical lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBX5C1TcdNJI0nKYlZ1yhR0y7Pp1_traYmxZLHqVyQ-PqpT8SSgzTuS11EoxePexglrQoyFAjGUX2yApaBuJP_LPAXbx8K3rSOxSDoxvbUa19v57MHTO4zjQdwQ-bna9CNB-SfMftVGzD7Nidhekn2yd8TqsxNRxpcrjoq4NCYn5ac6xb9hLRcJ5_e1-c2TvVBmHaejJZmLodVbOvu9fHfzwxuuoNSk9BLA1Gp4cAvp15zfXeBHe-S8')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white font-headline-sm text-headline-sm mb-1">Commercial</h4>
+<p class="text-white/70 text-sm">Offices, Hotels, and Retail.</p>
+</div>
+</div>
+<!-- Industrial -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden diffusion-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A clean, highly organized industrial manufacturing floor with automated machinery and stainless steel surfaces, showing extreme hygiene and systematic management. Cold professional tones, bright lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3o_bDp_epQ9_YBA80xyQ4ceCVk4V25AQmriPGIOVjcHNHEZAnxc9gKTB9ZKUcfHPhsDmZVYBXN0y5PmWYXDXnAHuk0IDqlxW8TuWZw2uc8NEcyq30-T726v1ve_NvLV-g-LU7h_LSQS7XSTtYcTM2Qc7bNGA5E30I_7zwLBd7K3ykUSnbqm_4mHH_C4DaIwPRyruTBKDNQ_ImLoYqIQnX0GiTb_NXJtEtNoJx0fUGJLHsWVhLIYLT')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white font-headline-sm text-headline-sm mb-1">Industrial</h4>
+<p class="text-white/70 text-sm">Plants and Warehouses.</p>
+</div>
+</div>
+<!-- Specialized -->
+<div class="group relative aspect-square rounded-2xl overflow-hidden diffusion-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="A sterile pharmaceutical laboratory or healthcare facility with specialized equipment and pristine white surfaces, illustrating high-stakes hygiene management. Clinical premium aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIZ8aJ4w9_cQgmp87EB0yrnlK2u_uzPSokuJYT5_3V5b5Qt8Me4lt20D9OBQWqMeaLB9J70Z_SMRgqwYRIf2VIT9jhuoSPOD8zCYp-EAwLSNXFA1gPwdS1XwAGbAgBexC7yXyNcRs95gDFM4EH-mp6YJOKgWORZdbgwfCDxEjfbdF0G2X7Hvk68rrCTJKWtiQzSPq8kM7y1rVV78mCXYCDZxETcl5PHBFGpNFa5Iy3jGM5dXVXrW6W')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h4 class="text-white font-headline-sm text-headline-sm mb-1">Specialized</h4>
+<p class="text-white/70 text-sm">Hospitals and Labs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values/Trust Signals Section -->
+<section class="py-20 md:py-section-padding bg-deep-forest text-white">
+<div class="max-w-[1200px] mx-auto px-4 md:px-8">
+<div class="grid md:grid-cols-4 gap-12 text-center">
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 bg-safety-lime/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-safety-lime text-4xl">schedule</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm mb-3">Round-the-Clock</h5>
+<p class="text-white/70 text-body-md">24/7 emergency response for critical infestations.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 bg-safety-lime/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-safety-lime text-4xl">description</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm mb-3">Stamp Warranty</h5>
+<p class="text-white/70 text-body-md">Legally binding protection for major treatments.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 bg-safety-lime/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-safety-lime text-4xl">timer</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm mb-3">Punctual Service</h5>
+<p class="text-white/70 text-body-md">On-time technicians, every single time.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 bg-safety-lime/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-safety-lime text-4xl">verified_user</span>
+</div>
+<h5 class="font-headline-sm text-headline-sm mb-3">Certified Pros</h5>
+<p class="text-white/70 text-body-md">Background-verified and highly trained staff.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-4">
+<div class="max-w-4xl mx-auto bg-white rounded-3xl p-12 diffusion-shadow border border-smoke-accent text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-safety-lime/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-deep-forest mb-6">Ready for a Hygiene Audit?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Join over 500 satisfied clients who trust Ideal Management for their safety.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a class="bg-primary text-white font-bold px-10 py-4 rounded-full hover:bg-primary-container transition-all shadow-lg" href="tel:1800000000">Schedule Consultation</a>
+<a class="bg-warm-gold text-deep-forest font-bold px-10 py-4 rounded-full hover:shadow-xl transition-all" href="#">Get a Free Quote</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-[1200px] mx-auto flex flex-col items-center gap-4 py-8 px-4 text-center">
+<div class="font-headline-sm text-headline-sm text-deep-forest font-bold mb-2">Ideal Management Services</div>
+<div class="flex flex-wrap justify-center gap-6 mb-4">
+<a class="text-on-surface-variant hover:text-warm-gold transition-colors font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-warm-gold transition-colors font-body-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-warm-gold transition-colors font-body-md" href="#">FAQ</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">
+                © 2024 Ideal Management Services. Professional Pest Control.
+            </p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface flex justify-around items-center h-16 px-2 shadow-[0px_-4px_20px_rgba(26,77,46,0.06)] border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined">shield</span>
+<span class="text-label-sm font-label-sm">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined">request_quote</span>
+<span class="text-label-sm font-label-sm">Get Quote</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-sm font-label-sm">My Account</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined">emergency_home</span>
+<span class="text-label-sm font-label-sm">Emergency</span>
+</a>
+</nav>
+<!-- Scripts for Interactivity -->
+<script>
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const toggle = document.getElementById('drawer-toggle');
+        const close = document.getElementById('drawer-close');
+
+        function toggleDrawer() {
+            drawer.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        toggle.addEventListener('click', toggleDrawer);
+        close.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+
+        // Smooth reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

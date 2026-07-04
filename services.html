@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Services | Ideal Management Services</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#fed65b",
+                        "primary": "#00361a",
+                        "on-secondary-container": "#745c00",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00210e",
+                        "primary-fixed": "#b8f0c5",
+                        "inverse-primary": "#9dd3aa",
+                        "on-primary-fixed-variant": "#1d5031",
+                        "on-tertiary-fixed": "#00210c",
+                        "tertiary-fixed-dim": "#4de082",
+                        "primary-container": "#1a4d2e",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "outline": "#717971",
+                        "on-primary-container": "#88bd95",
+                        "on-secondary-fixed-variant": "#574500",
+                        "deep-forest": "#1A4D2E",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#2fca6e",
+                        "surface-dim": "#d9dadb",
+                        "on-surface": "#191c1d",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed": "#6dfe9c",
+                        "surface-tint": "#366847",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container": "#edeeef",
+                        "smoke-accent": "#E9ECEF",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c9bf",
+                        "inverse-surface": "#2e3132",
+                        "warm-gold": "#D4AF37",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#003617",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#414942",
+                        "tertiary-container": "#004f25",
+                        "on-tertiary-fixed-variant": "#005227",
+                        "primary-fixed-dim": "#9dd3aa",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#735c00",
+                        "on-background": "#191c1d",
+                        "slate-text": "#2D3436",
+                        "safety-lime": "#4ADE80",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "element-gap": "16px",
+                        "stack-margin": "32px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #E9ECEF;
+            box-shadow: 0px 4px 20px rgba(26, 77, 46, 0.06);
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 10px 30px rgba(26, 77, 46, 0.12);
+        }
+        .trust-icon-bg {
+            background-color: rgba(74, 222, 128, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary/20 overflow-x-hidden">
+    <!-- Top Utility Bar -->
+    <div class="hidden md:flex bg-primary text-white h-10 items-center justify-between px-8 text-label-sm font-label-sm">
+        <div class="flex gap-6">
+            <a href="tel:+919819977940" class="flex items-center gap-2 hover:text-warm-gold transition-colors">
+                <span class="material-symbols-outlined text-[16px]">call</span>
+                <span>PAN India Support: +91 9819977940</span>
+            </a>
+            <a href="mailto:mayur.patil@idealmanagementservices.com" class="flex items-center gap-2 hover:text-warm-gold transition-colors">
+                <span class="material-symbols-outlined text-[16px]">mail</span>
+                <span>mayur.patil@idealmanagementservices.com</span>
+            </a>
+        </div>
+        <div>Clinical-Grade Pest Protection Since 2016</div>
+    </div>
+    
+    <!-- TopAppBar -->
+    <header class="bg-black/35 backdrop-blur-md absolute top-0 w-full z-50 flex justify-between items-center h-20 md:h-24 px-6 md:px-12 transition-all duration-300 border-b border-white/10">
+        <a href="index.html" class="flex items-center gap-4">
+            <img src="logo.png" alt="Ideal Management Services Logo" class="h-12 md:h-16 w-auto object-contain"/>
+            <span class="font-display-lg-mobile text-[24px] md:text-[30px] font-extrabold text-white tracking-tight leading-none">
+                Ideal <span class="text-safety-lime">Management Services</span>
+            </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-white/80 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-label-bold text-label-bold" href="index.html">Home</a>
+            <a class="text-white font-bold px-3 py-2 rounded-lg font-label-bold text-label-bold" href="services.html">Services</a>
+            <a class="text-white/80 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-label-bold text-label-bold" href="about.html">About Us</a>
+            <a class="text-white/80 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-label-bold text-label-bold" href="clients.html">Our Clients</a>
+            <a class="text-white/80 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-label-bold text-label-bold" href="contact.html">Contact</a>
+            <a class="bg-primary text-white font-bold px-8 py-3 rounded-full active:scale-95 duration-200 hover:bg-safety-lime hover:text-primary transition-all text-sm uppercase tracking-wider" href="tel:+919819977940">Call Now</a>
+        </nav>
+        <button class="md:hidden p-2 text-white active:scale-95 duration-200" id="drawer-toggle">
+            <span class="material-symbols-outlined text-[32px]">menu</span>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity" id="drawer-overlay"></div>
+    
+    <!-- NavigationDrawer -->
+    <aside class="fixed inset-y-0 left-0 w-80 z-[60] bg-surface-container-low flex flex-col h-full shadow-2xl -translate-x-full transition-all duration-300 ease-in-out" id="drawer">
+        <div class="p-6 border-b border-outline-variant">
+            <div class="font-headline-sm text-headline-sm text-deep-forest font-bold">Ideal Management Services</div>
+        </div>
+        <nav class="flex flex-col py-4 flex-grow">
+            <a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="index.html">
+                <span class="material-symbols-outlined">home</span> Home
+            </a>
+            <a class="bg-primary-container text-on-primary-container rounded-r-full py-3 px-6 flex items-center gap-4" href="services.html">
+                <span class="material-symbols-outlined">pest_control</span> Services
+            </a>
+            <a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="about.html">
+                <span class="material-symbols-outlined">business_center</span> About Us
+            </a>
+            <a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="clients.html">
+                <span class="material-symbols-outlined">people</span> Our Clients
+            </a>
+            <a class="text-on-surface-variant hover:text-primary py-3 px-6 hover:bg-surface-container-highest transition-all flex items-center gap-4" href="contact.html">
+                <span class="material-symbols-outlined">mail</span> Contact
+            </a>
+        </nav>
+        <div class="p-6">
+            <button class="w-full bg-warm-gold text-deep-forest font-bold py-3 rounded-xl active:scale-95 transition-transform" id="drawer-close">Close Menu</button>
+        </div>
+    </aside>
+
+    <main class="pt-0 pb-24 bg-[#f8f9fa]">
+        <!-- Hero Section -->
+        <section class="relative h-[340px] md:h-[440px] flex items-center justify-start overflow-hidden bg-[#002f47] pt-20 md:pt-24">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/services_hero.png');"></div>
+            <div class="max-w-[1200px] mx-auto w-full px-6 md:px-12 relative z-10 text-left mt-6 md:mt-10">
+                <h1 class="font-display text-[40px] md:text-[56px] font-extrabold text-white leading-tight">Our services</h1>
+                <div class="flex items-center gap-2 text-white/80 text-sm mt-3 font-semibold uppercase tracking-wider">
+                    <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-[#1dbf53]">Services</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Grid Section -->
+        <section class="max-w-[1200px] mx-auto px-4 md:px-8 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- General Disinfestation -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col group transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                    <div class="relative h-64 overflow-visible">
+                        <img alt="General Disinfestation" class="w-full h-full object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105" src="images/generalDisinfestation.jpeg"/>
+                        <!-- Green overlapping badge icon -->
+                        <div class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-[#1dbf53] flex items-center justify-center shadow-lg border-4 border-white z-20 transition-all duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-white text-[24px]" style="font-variation-settings: 'FILL' 1;">pest_control</span>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-10 flex flex-col items-center text-center flex-grow">
+                        <h3 class="font-bold text-[#002f47] text-xl md:text-2xl mb-3 group-hover:text-[#1dbf53] transition-colors">General Disinfestation</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Expert management of household pests including Cockroaches, Ants, and Silverfish using target-specific, low-toxicity methodologies.</p>
+                        <button class="mt-auto text-[#1dbf53] font-bold flex items-center gap-2 hover:gap-3 transition-all text-sm uppercase tracking-wider" onclick="openModal('disinfestation')">
+                            View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Rodent Management -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col group transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                    <div class="relative h-64 overflow-visible">
+                        <img alt="Rodent Management" class="w-full h-full object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105" src="images/RodentManagement.jpeg"/>
+                        <!-- Green overlapping badge icon -->
+                        <div class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-[#1dbf53] flex items-center justify-center shadow-lg border-4 border-white z-20 transition-all duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-white text-[24px]" style="font-variation-settings: 'FILL' 1;">nature</span>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-10 flex flex-col items-center text-center flex-grow">
+                        <h3 class="font-bold text-[#002f47] text-xl md:text-2xl mb-3 group-hover:text-[#1dbf53] transition-colors">Rodent Management</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Strategic chemical and mechanical measures tailored for industrial and residential perimeters to eliminate nesting and entry points.</p>
+                        <button class="mt-auto text-[#1dbf53] font-bold flex items-center gap-2 hover:gap-3 transition-all text-sm uppercase tracking-wider" onclick="openModal('rodent')">
+                            View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Bed Bugs Control -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col group transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                    <div class="relative h-64 overflow-visible">
+                        <img alt="Bed Bugs Control" class="w-full h-full object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105" src="images/Bedbugs.jpeg"/>
+                        <!-- Green overlapping badge icon -->
+                        <div class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-[#1dbf53] flex items-center justify-center shadow-lg border-4 border-white z-20 transition-all duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-white text-[24px]" style="font-variation-settings: 'FILL' 1;">hotel</span>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-10 flex flex-col items-center text-center flex-grow">
+                        <h3 class="font-bold text-[#002f47] text-xl md:text-2xl mb-3 group-hover:text-[#1dbf53] transition-colors">Bed Bugs Control</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Targeted thermal and chemical treatments designed to penetrate deep into furniture and textiles for complete eradication.</p>
+                        <button class="mt-auto text-[#1dbf53] font-bold flex items-center gap-2 hover:gap-3 transition-all text-sm uppercase tracking-wider" onclick="openModal('bedbugs')">
+                            View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Mosquito Management -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col group transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                    <div class="relative h-64 overflow-visible">
+                        <img alt="Mosquito Management" class="w-full h-full object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105" src="images/mosquitomanagement.jpeg"/>
+                        <!-- Green overlapping badge icon -->
+                        <div class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-[#1dbf53] flex items-center justify-center shadow-lg border-4 border-white z-20 transition-all duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-white text-[24px]" style="font-variation-settings: 'FILL' 1;">bug_report</span>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-10 flex flex-col items-center text-center flex-grow">
+                        <h3 class="font-bold text-[#002f47] text-xl md:text-2xl mb-3 group-hover:text-[#1dbf53] transition-colors">Mosquito Management</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Comprehensive larval and adult management systems using fogging, misting, and source reduction strategies for large estates.</p>
+                        <button class="mt-auto text-[#1dbf53] font-bold flex items-center gap-2 hover:gap-3 transition-all text-sm uppercase tracking-wider" onclick="openModal('mosquito')">
+                            View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Termite Control -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col group transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                    <div class="relative h-64 overflow-visible">
+                        <img alt="Termite Control" class="w-full h-full object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105" src="images/ControlTermitesatHome.jpeg"/>
+                        <!-- Green overlapping badge icon -->
+                        <div class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-[#1dbf53] flex items-center justify-center shadow-lg border-4 border-white z-20 transition-all duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-white text-[24px]" style="font-variation-settings: 'FILL' 1;">foundation</span>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-10 flex flex-col items-center text-center flex-grow">
+                        <h3 class="font-bold text-[#002f47] text-xl md:text-2xl mb-3 group-hover:text-[#1dbf53] transition-colors">Termite Control</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Critical pre and post-construction soil treatments creating an impenetrable chemical barrier around your structural assets.</p>
+                        <button class="mt-auto text-[#1dbf53] font-bold flex items-center gap-2 hover:gap-3 transition-all text-sm uppercase tracking-wider" onclick="openModal('termite')">
+                            View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Bird Management -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.03)] border border-slate-100 flex flex-col group transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                    <div class="relative h-64 overflow-visible">
+                        <img alt="Bird Management" class="w-full h-full object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105" src="images/birdmanagement.jpeg"/>
+                        <!-- Green overlapping badge icon -->
+                        <div class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-[#1dbf53] flex items-center justify-center shadow-lg border-4 border-white z-20 transition-all duration-300 group-hover:scale-110">
+                            <span class="material-symbols-outlined text-white text-[24px]" style="font-variation-settings: 'FILL' 1;">flutter_dash</span>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-10 flex flex-col items-center text-center flex-grow">
+                        <h3 class="font-bold text-[#002f47] text-xl md:text-2xl mb-3 group-hover:text-[#1dbf53] transition-colors">Bird Management</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">High-durability HDPE bird netting and stainless steel mesh solutions that protect architectural facades without compromising aesthetics.</p>
+                        <button class="mt-auto text-[#1dbf53] font-bold flex items-center gap-2 hover:gap-3 transition-all text-sm uppercase tracking-wider" onclick="openModal('bird')">
+                            View Details <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        
+        <!-- Trust Markers -->
+        <section class="mt-20 py-12 border-y border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-4 flex flex-wrap justify-around gap-8 items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2 font-bold text-deep-forest"><span class="material-symbols-outlined">verified</span> ISO 9001:2015 CERTIFIED</div>
+                <div class="flex items-center gap-2 font-bold text-deep-forest"><span class="material-symbols-outlined">eco</span> ECO-FRIENDLY SOLUTIONS</div>
+                <div class="flex items-center gap-2 font-bold text-deep-forest"><span class="material-symbols-outlined">gpp_good</span> LICENSED TECHS</div>
+                <div class="flex items-center gap-2 font-bold text-deep-forest"><span class="material-symbols-outlined">workspace_premium</span> PREMIUM SERVICE</div>
+            </div>
+        </section>
+
+        <!-- Why Ideal Section with original bullet points -->
+        <section class="py-20 bg-[#f1f5f9]">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-12">
+                    <span class="inline-flex items-center gap-2 border border-emerald-100 bg-emerald-50 text-[#1dbf53] px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+                        Why Choose Us
+                    </span>
+                    <h2 class="font-display text-[32px] md:text-[44px] font-extrabold text-[#002f47] mb-4">Why Ideal Pest Management?</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">We are proud to offer a range of exceptional services that ensure peace of mind.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <ul class="space-y-4 text-slate-600 font-medium">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Round-the-clock complaint service, available seven days a week with prior appointment.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Warranty on stamp paper for Pre-Construction Anti Termite Control Treatment.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Reliable, friendly, and punctual service you can count on.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>24/7 customer support for any inquiries or concerns.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Free spot treatment if any pest issue arises during the contract period.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Highly trained and certified technicians ensuring top-notch service.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+                        <ul class="space-y-4 text-slate-600 font-medium">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Complimentary inspection and quotation to assess your needs.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Utilization of advanced odourless gel treatment for effective cockroach and ant control.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Maintaining audit reports in compliance with relevant requirements.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Implementing an integrated pest management approach for comprehensive pest control.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Exclusively using chemicals approved by the Central Insecticide Board of India.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-[#1dbf53] shrink-0">check_circle</span>
+                                <span>Offering free Integrated Pest Control training programs for both commercial and residential clients.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-white relative overflow-hidden">
+            <style>
+                .no-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .no-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            </style>
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+                <!-- Badge & Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="inline-flex items-center gap-2 border border-emerald-100 bg-emerald-50 text-[#1dbf53] px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#1dbf53]"></span> Our Clients
+                    </span>
+                    <h2 class="font-display text-[32px] md:text-[48px] font-extrabold text-[#002f47] mt-4 leading-tight">
+                        Trusted by industry leaders for <br class="hidden sm:inline"/>superior <span class="text-[#1dbf53]">pest management</span>
+                    </h2>
+                </div>
+                
+                <!-- Horizontally Scrollable 20 Client Testimonial Cards -->
+                <div id="client-cards-slider" class="overflow-x-auto flex gap-6 pb-8 snap-x snap-mandatory no-scrollbar scroll-smooth">
+                    <!-- Client 1: State Bank of India -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/sbi.png" alt="State Bank of India" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">State Bank of India</h4>
+                                    <p class="text-xs text-slate-500">Corporate & Banking Space</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Excellent service! We had a major pest concern in our branch, and they handled the disinfestation quickly and professionally."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 2: UTI Mutual Fund -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/uti_mutual_fund.png" alt="UTI Mutual Fund" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">UTI Mutual Fund</h4>
+                                    <p class="text-xs text-slate-500">Financial Services Office</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Highly satisfied with their regular quarterly maintenance. Very reliable clinical hygiene standards."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 3: CSMIA Mumbai Airport -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/csm_airport.png" alt="CSMIA Mumbai Airport" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">CSMIA Mumbai Airport</h4>
+                                    <p class="text-xs text-slate-500">Transit & Aviation Hub</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Managing public hygiene at this scale is challenging. Ideal Management delivers world-class pest control consistently."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 4: Lodha Group -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/lodha.png" alt="Lodha Group" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Lodha Group</h4>
+                                    <p class="text-xs text-slate-500">Premium Real Estate Partner</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Outstanding service quality for our residential projects. Their eco-safe treatments are highly appreciated by residents."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 5: Piramal Realty -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/piramal_realty.png" alt="Piramal Realty" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Piramal Realty</h4>
+                                    <p class="text-xs text-slate-500">Luxury Property Developers</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Proactive and extremely professional. Their team keeps our commercial and luxury residential premises completely pest-free."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 6: Adani Lounge -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/adani_lounge.png" alt="Adani Lounge" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Adani Lounge</h4>
+                                    <p class="text-xs text-slate-500">Premium Transit Hospitality</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Impeccable service quality. Safe, prompt, and completely aligned with our luxury hospitality hygiene guidelines."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 7: VJTI Mumbai -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/vjti.png" alt="VJTI Mumbai" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">VJTI Mumbai</h4>
+                                    <p class="text-xs text-slate-500">Academic & Campus Facility</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Great campus-wide execution. Their sanitization and rodent control treatments are highly effective and safely managed."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 8: Gurukrupa Hospital -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/gurukrupa_hospital.png" alt="Gurukrupa Hospital" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Gurukrupa Hospital</h4>
+                                    <p class="text-xs text-slate-500">Healthcare & Critical Care</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Crucial service for our clinical environment. Their sterile, zero-chemical pest control matches medical-grade requirements."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 9: Travel Food Services -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/tfs.png" alt="Travel Food Services" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Travel Food Services</h4>
+                                    <p class="text-xs text-slate-500">F&B Hospitality Group</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Food safety is our top priority. Ideal Management maintains immaculate pest-free status across all our airport food outlets."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 10: BVG India -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/bvg.png" alt="BVG India" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">BVG India</h4>
+                                    <p class="text-xs text-slate-500">Facilities Management Partner</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "A highly trusted partner. Their execution scale and capability for emergency pest situations are unmatched."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 11: Maa Shakti Property -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/maa_shakti.png" alt="Maa Shakti Property" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Maa Shakti Property</h4>
+                                    <p class="text-xs text-slate-500">Real Estate Developers</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Great attention to detail during pre-construction termite proofing. A very reliable and professional contractor."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 12: Raj Bhavan -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/raj_bhavan.png" alt="Raj Bhavan" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Raj Bhavan</h4>
+                                    <p class="text-xs text-slate-500">Government Facility</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Superb execution and professional standards. Aligned with strict security protocols while ensuring pristine premises."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 13: Dainik Bhaskar -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/dainik_bhaskar.png" alt="Dainik Bhaskar" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Dainik Bhaskar</h4>
+                                    <p class="text-xs text-slate-500">Media House Headquarters</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Consistently great support for our offices. Prompt response and eco-friendly methods that protect our workplace."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 14: The Beatle Hotel -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/the_beatle.png" alt="The Beatle Hotel" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">The Beatle Hotel</h4>
+                                    <p class="text-xs text-slate-500">Hospitality & Leisure</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Cleanliness and guest comfort are key. Their premium pest control ensures our hotel maintains top hygiene ratings."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 15: Tunga International -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/tunga_international.png" alt="Tunga International" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Tunga International</h4>
+                                    <p class="text-xs text-slate-500">Business Hotel Group</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Very professional team. Their regular audits help us maintain a completely clean and welcoming environment."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 16: PIP IN -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/pip_in.png" alt="PIP IN" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">PIP IN</h4>
+                                    <p class="text-xs text-slate-500">Corporate Workspace</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Quick, effective, and hassle-free. They schedule treatments after-hours to ensure zero disruption to our team."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 17: JMJ Group -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/jmj.png" alt="JMJ Group" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">JMJ Group</h4>
+                                    <p class="text-xs text-slate-500">Commercial Enterprises</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Excellent account management. We receive detailed audit reports after every treatment, ensuring complete transparency."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 18: Vihang Group -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/vihang.png" alt="Vihang Group" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Vihang Group</h4>
+                                    <p class="text-xs text-slate-500">Housing & Infrastructure</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Highly recommended for large residential complexes. Their general disinfestation works wonders every season."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 19: Kantilal Chhaganlal -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/kantilal_chhaganlal.png" alt="Kantilal Chhaganlal" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Kantilal Chhaganlal</h4>
+                                    <p class="text-xs text-slate-500">Corporate Headquarters</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Prompt services and extremely well-trained technicians. Their expertise in rodent control has been exceptional."
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Client 20: Airport Cargo -->
+                    <div class="flex-none w-[320px] md:w-[360px] snap-start bg-white p-8 rounded-[32px] border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] hover:border-[#1dbf53]/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-14 h-14 rounded-full overflow-hidden border border-slate-100 flex items-center justify-center bg-white p-1">
+                                    <img src="images/clients/airport_cargo.png" alt="Airport Cargo" class="max-h-full max-w-full object-contain"/>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#002f47] text-base line-clamp-1">Airport Cargo</h4>
+                                    <p class="text-xs text-slate-500">Logistics & Warehousing</p>
+                                </div>
+                            </div>
+                            <!-- Stars -->
+                            <div class="flex gap-0.5 text-[#1dbf53] mb-4">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400;">star</span>
+                            </div>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                                "Ensuring zero pest damage in high-turnover cargo zones is vital. Ideal Management does a fantastic job daily."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Guide Overlay for desktop -->
+                <div class="flex justify-center items-center gap-2 mt-4 text-xs text-slate-400 font-medium select-none pointer-events-none">
+                    <span class="material-symbols-outlined text-sm">swipe_left</span>
+                    <span>Scroll horizontally to view more clients</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="w-full bg-[#002f47] text-white py-16 px-6 relative z-10 border-t border-white/5">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white">Ideal Management Services</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Since 2016, Ideal Management Service has been diligently providing unparalleled pest control services across PAN India.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#1dbf53] hover:text-white transition-all flex items-center justify-center text-slate-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#1dbf53] hover:text-white transition-all flex items-center justify-center text-slate-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#1dbf53] hover:text-white transition-all flex items-center justify-center text-slate-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white">Our Services</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-white text-sm hover:text-[#1dbf53] transition-colors"><a href="services.html">Comprehensive Pest Control Services</a></h4>
+                            <p class="text-xs text-slate-400 mt-1">Technical Excellence and Ongoing Support</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm hover:text-[#1dbf53] transition-colors"><a href="services.html">Diverse Range of Facilities and Expertise</a></h4>
+                            <p class="text-xs text-slate-400 mt-1">We are proud to offer a range of exceptional services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white">Quick Links</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-400 font-medium">
+                        <li><a href="index.html" class="hover:text-[#1dbf53] hover:underline transition-all">Home</a></li>
+                        <li><a href="about.html" class="hover:text-[#1dbf53] hover:underline transition-all">About</a></li>
+                        <li><a href="services.html" class="hover:text-[#1dbf53] hover:underline transition-all">Services</a></li>
+                        <li><a href="clients.html" class="hover:text-[#1dbf53] hover:underline transition-all">Our Clients</a></li>
+                        <li><a href="contact.html" class="hover:text-[#1dbf53] hover:underline transition-all">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white">Have a Question?</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0 mt-0.5">map</span>
+                            <span>Head Office: Office 09, Shubh, QueensPark, opp AR Hotel Miraroad East-401107</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0 mt-0.5">map</span>
+                            <span>Branches: Mumbai, Maharashtra, Gujrat, Banglore, Chennai, Goa, Hyderbad</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0">call</span>
+                            <a href="tel:+919819977940" class="hover:text-[#1dbf53] transition-colors">+91 9819977940</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0">mail</span>
+                            <a href="mailto:mayur.patil@idealmanagementservices.com" class="hover:text-[#1dbf53] transition-colors break-all">mayur.patil@idealmanagementservices.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-xs md:text-sm text-slate-500 tracking-wider flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>Copyright &copy; 2026 Ideal Management Services. All Rights Reserved.</div>
+                <div>Powered by <a href="https://kaalvion.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-400 hover:text-[#1dbf53] transition-colors">Kaalvion</a></div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bottom Navigation Bar (Mobile only) -->
+    <nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface flex justify-around items-center h-16 px-2 shadow-[0px_-4px_20px_rgba(26,77,46,0.06)] border-t border-outline-variant">
+        <a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="services.html">
+            <span class="material-symbols-outlined">shield</span>
+            <span class="text-label-sm font-label-sm">Services</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="contact.html">
+            <span class="material-symbols-outlined">request_quote</span>
+            <span class="text-label-sm font-label-sm">Get Quote</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="about.html">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-label-sm font-label-sm">About Us</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70 hover:opacity-100 transition-all" href="tel:+919819977940">
+            <span class="material-symbols-outlined">emergency_home</span>
+            <span class="text-label-sm font-label-sm">Emergency</span>
+        </a>
+    </nav>
+
+    <!-- Detail Modals Overlay -->
+    <div id="service-modal" class="fixed inset-0 bg-black/60 z-[100] hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[85vh] overflow-y-auto shadow-2xl border border-smoke-accent flex flex-col">
+            <div class="p-6 border-b border-outline-variant flex justify-between items-center sticky top-0 bg-white">
+                <h3 id="modal-title" class="font-headline-md text-headline-sm md:text-headline-md text-deep-forest font-bold">Service Details</h3>
+                <button onclick="closeModal()" class="text-on-surface-variant hover:text-error p-1 rounded-full hover:bg-surface-container-high transition-colors">
+                    <span class="material-symbols-outlined text-2xl">close</span>
+                </button>
+            </div>
+            <div id="modal-body" class="p-8 font-body-md text-body-md text-on-surface-variant space-y-6 leading-relaxed">
+                <!-- Content injected dynamically -->
+            </div>
+            <div class="p-6 border-t border-outline-variant bg-surface-container-low flex justify-end gap-4 sticky bottom-0">
+                <button onclick="closeModal()" class="px-6 py-2.5 rounded-lg border border-outline text-on-surface-variant font-bold hover:bg-surface-container-high transition-colors">Close</button>
+                <a href="tel:+919819977940" class="px-6 py-2.5 rounded-lg bg-primary text-white font-bold hover:bg-primary-container transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">call</span> Book Service
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for Drawer and Modal Data -->
+    <script>
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const toggle = document.getElementById('drawer-toggle');
+        const close = document.getElementById('drawer-close');
+
+        function toggleDrawer() {
+            drawer.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        toggle.addEventListener('click', toggleDrawer);
+        close.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+
+        // Modals Content Data Map (Pre-populated with original services.html descriptions)
+        const modalData = {
+            disinfestation: {
+                title: "General Disinfestation Treatment",
+                content: `
+                    <p class="font-bold text-primary">Target Pests: Cockroaches, Red or Black Ants, and Silverfish.</p>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">COCKROACHES</h4>
+                    <p>They feed on any fruits, vegetables, meat etc. They contaminate food items, cause asthmatic reactions, and their presence causes a nuisance. They cause diseases like gastroenteritis, Typhoid fever, Dysentery, etc.</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>German Cockroaches:</strong> Normally found in Kitchens, Food processing units, and Restaurants, especially in cracks and crevices. They prefer warm & moist environments. Their reproduction rate is higher than any other species.</li>
+                        <li><strong>American Cockroaches:</strong> Found in Manholes, Gutters, Sewers, and Ducts. They enter homes through nani traps and climb through drain pipes to high-rise levels.</li>
+                        <li><strong>Brown Banded Cockroaches:</strong> Nocturnal in nature, found beneath tables, furniture, shelves, and behind wallpaper. They fly when disturbed.</li>
+                        <li><strong>Oriental Cockroaches:</strong> Found in dark, cold, damp places like basements and sewers.</li>
+                    </ul>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">Treatment Methodology</h4>
+                    <p>We use advanced, odorless gel treatments applied target-specifically inside cracks and harborages. This ensures zero disruption, zero smell, and highly effective control.</p>
+                `
+            },
+            rodent: {
+                title: "Rodent Management Services",
+                content: `
+                    <p class="font-bold text-primary">Target Pests: House Mouse, Roof Rats, Norway Rats, and Bandicoots.</p>
+                    <p class="mt-2">Rodents are clever mammals. A single pair can multiply to 800 in a year. They destroy and contaminate more than they feed on due to their continuous "gnawing action". They transmit serious diseases like rat bite fever, Leptospirosis, Plague, Salmonellosis, and cause food poisoning.</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>House Mouse:</strong> Small, clever, excellent climbers, living in homes.</li>
+                        <li><strong>Roof Rats:</strong> Large, with tails longer than their body length, highly active on higher levels.</li>
+                        <li><strong>Norway Rats:</strong> Commonly found in sewers and drains, tail shorter than body length, prefer carbs/proteins.</li>
+                        <li><strong>Bandicoot:</strong> Very large and ferocious-looking, causes considerable damage to building foundations.</li>
+                    </ul>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">Treatment Control Plan</h4>
+                    <p>Our management is divided into two sections:</p>
+                    <ol class="list-decimal pl-5 mt-2 space-y-2">
+                        <li><strong>Chemical Measure (Compound Premises):</strong> Anticoagulant rodenticides mixed with bait matrix placed safely in exterior parameters.</li>
+                        <li><strong>Mechanical Measure (Inside Premises):</strong> Placement of Scissor traps, Wonder traps, Cages, and Glue boards along runways inside the building to ensure safe containment.</li>
+                    </ol>
+                `
+            },
+            bedbugs: {
+                title: "Bed Bugs Control & Thermal Treatment",
+                content: `
+                    <p class="font-bold text-primary">Target Pests: Bed Bugs (Cimex lectularius)</p>
+                    <p class="mt-2">Bed bugs emerge at night seeking human blood. They flat-out hide in mattresses, box springs, bed frames, window frames, picture frames, electrical switches, and wall voids. Females lay 3 to 5 adhesive eggs per day, and they can survive for over a year without feeding.</p>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">Service & Treatment details</h4>
+                    <p>Pesticides are applied directly into cracks, crevices, and mattress seams harboring bugs:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>Wall voids & Electrical equipment:</strong> Treated with safe chemical dusts to prevent penetration.</li>
+                        <li><strong>Mattresses & Furniture:</strong> High-efficacy synthetic pyrethroids (Deltamethrin, Alphacypermethrin) applied with specialized extension nozzles.</li>
+                        <li><strong>Quick Kill Knockdown:</strong> Fan spray and pin-stream nozzles ensure rapid eradication of eggs, nymphs, and adult bugs.</li>
+                    </ul>
+                `
+            },
+            mosquito: {
+                title: "Mosquito Management Systems",
+                content: `
+                    <p class="font-bold text-primary">Target Diseases: Malaria (Anopheles), Dengue & Chikungunya (Aedes), Filariasis (Culex).</p>
+                    <p class="mt-2">Breeding happens in stagnant water tanks, rain-water collections, and drains. Effective control requires a systematic two-part treatment.</p>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">Control Protocols</h4>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>1. Larval Management:</strong> Weekly spraying of breeding sources with targeted larvicides to eliminate mosquitoes at their weakest egg/larva phase.</li>
+                        <li><strong>2. Adult Management:</strong> Residual barrier spray treatments on resting spots (garbage areas, bathrooms, ducts, garden perimeters) combined with thermal fogging (using diesel-based fogging mixtures) at dusk to control active swarms.</li>
+                    </ul>
+                `
+            },
+            termite: {
+                title: "Termite Control Treatment (Pre & Post Construction)",
+                content: `
+                    <p class="font-bold text-primary">White Ants / Subterranean Termites</p>
+                    <p class="mt-2">Termites damage any cellulose-containing structure. They cause massive structural damage silently without mud tubes being visible initially. Ideal Management specializes in creating permanent chemical barriers.</p>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">Post-Construction Treatment (Ready Structures)</h4>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>Inside Premises:</strong> Drilling 12mm holes at wall-floor junctions, injecting chemical emulsion, and sealing them with cement. Check-ups are done quarterly.</li>
+                        <li><strong>Outside Premises:</strong> Column and external perimeter drilling up to 1 ft depth to safeguard foundation pillars.</li>
+                    </ul>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">Pre-Construction Treatment (Under Construction)</h4>
+                    <p>Creates a continuous chemical barrier during foundation layouts, including plinth soil treatments (5L per sq.m), wall-floor junctions, and pipes/conduit loosened soil treatments.</p>
+                    <p class="font-semibold text-primary mt-2">Includes unique legal Stamp Paper Warranty on specialized treatments.</p>
+                `
+            },
+            bird: {
+                title: "Humane Bird Netting & Management",
+                content: `
+                    <p class="font-bold text-primary">Protection against Pigeon and Sparrow Dropping Contamination</p>
+                    <p class="mt-2">Pigeons and sparrows nesting on balconies and windows cause severe hygiene hazards. Contaminated bird droppings can lead to respiratory diseases.</p>
+                    <h4 class="font-bold text-deep-forest text-lg mt-4">Key Features of our Netting</h4>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li>High-Density Polyethylene Garware nets (Highly Durable).</li>
+                        <li><strong>3-Year Warranty:</strong> Free maintenance and complaint visits.</li>
+                        <li>Stainless Steel (SS) robust wire metal framework for clean, non-rusting support.</li>
+                        <li>Humane deterrent without any sharp edges or chemical repellents.</li>
+                    </ul>
+                    <p class="mt-2"><strong>Pigeon Netting:</strong> 40mm x 40mm gap. <br><strong>Sparrow Netting:</strong> 25mm x 25mm gap.</p>
+                `
+            }
+        };
+
+        const modal = document.getElementById('service-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(serviceId) {
+            const data = modalData[serviceId];
+            if (data) {
+                modalTitle.innerHTML = data.title;
+                modalBody.innerHTML = data.content;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on clicking overlay
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Auto Scroll for Client Cards Testimonials (every 4 seconds)
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('client-cards-slider');
+            if (!slider) return;
+            
+            let scrollInterval;
+            const startAutoScroll = () => {
+                scrollInterval = setInterval(() => {
+                    const firstCard = slider.firstElementChild;
+                    if (!firstCard) return;
+                    
+                    const cardWidth = firstCard.offsetWidth + 24; // Card width + gap
+                    const maxScroll = slider.scrollWidth - slider.clientWidth;
+                    
+                    if (slider.scrollLeft >= maxScroll - 10) {
+                        // Loop back to start smoothly
+                        slider.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                    }
+                }, 4000);
+            };
+            
+            startAutoScroll();
+            
+            // Pause auto-scroll on hover or touch interactions
+            slider.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+            slider.addEventListener('mouseleave', startAutoScroll);
+            slider.addEventListener('touchstart', () => clearInterval(scrollInterval), { passive: true });
+            slider.addEventListener('touchend', startAutoScroll, { passive: true });
+        });
+    </script>
+</body>
+</html>
