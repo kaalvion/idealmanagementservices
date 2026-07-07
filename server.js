@@ -368,4 +368,10 @@ if (process.env.NODE_ENV !== 'production' && require.main === module) {
 }
 
 module.exports = app;
+module.exports.config = {
+    api: {
+        bodyParser: false,
+    },
+};
+
 
