@@ -1,21 +1,14 @@
 {
   "version": 2,
-  "routes": [
+  "functions": {
+    "server.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "rewrites": [
     {
-      "src": "/api/complaint",
-      "dest": "/server.js"
-    },
-    {
-      "src": "/feedback",
-      "dest": "/feedback/index.html"
-    },
-    {
-      "src": "/complaint",
-      "dest": "/feedback/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/api/complaint",
+      "destination": "/server.js"
     }
   ]
 }
