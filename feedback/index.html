@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Customer Complaint Form | Ideal Management Services</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fed65b",
+                    "primary": "#00361a",
+                    "on-secondary-container": "#745c00",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#00210e",
+                    "primary-fixed": "#b8f0c5",
+                    "inverse-primary": "#9dd3aa",
+                    "on-primary-fixed-variant": "#1d5031",
+                    "on-tertiary-fixed": "#00210c",
+                    "tertiary-fixed-dim": "#4de082",
+                    "primary-container": "#1a4d2e",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "outline": "#717971",
+                    "on-primary-container": "#88bd95",
+                    "on-secondary-fixed-variant": "#574500",
+                    "deep-forest": "#1A4D2E",
+                    "secondary-fixed": "#ffe088",
+                    "secondary-fixed-dim": "#e9c349",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary-container": "#2fca6e",
+                    "surface-dim": "#d9dadb",
+                    "on-surface": "#191c1d",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed": "#6dfe9c",
+                    "surface-tint": "#366847",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container": "#edeeef",
+                    "smoke-accent": "#E9ECEF",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c1c9bf",
+                    "inverse-surface": "#2e3132",
+                    "warm-gold": "#D4AF37",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#241a00",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#003617",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#414942",
+                    "tertiary-container": "#004f25",
+                    "on-tertiary-fixed-variant": "#005227",
+                    "primary-fixed-dim": "#9dd3aa",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#735c00",
+                    "on-background": "#191c1d",
+                    "slate-text": "#2D3436",
+                    "safety-lime": "#4ADE80",
+                    "inverse-on-surface": "#f0f1f2",
+                    "background": "#f8f9fa"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Montserrat"]
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col pt-20 md:pt-24">
+    <!-- TopAppBar -->
+    <header class="bg-black/85 backdrop-blur-md fixed top-0 w-full z-50 flex justify-between items-center h-20 md:h-24 px-6 md:px-12 transition-all duration-300 border-b border-white/10">
+        <a href="/index.html" class="flex items-center gap-4">
+            <img src="/logo.png" alt="Ideal Management Services Logo" class="h-12 md:h-16 w-auto object-contain"/>
+            <span class="font-display-lg-mobile text-[22px] md:text-[28px] font-extrabold tracking-tight leading-none bg-gradient-to-r from-[#ffe89e] via-[#ecd47c] to-[#a37e2c] bg-clip-text text-transparent drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                Ideal Management Services
+            </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-white/85 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-bold text-sm" href="/index.html">Home</a>
+            <a class="text-white/85 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-bold text-sm" href="/services.html">Services</a>
+            <a class="text-white/85 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-bold text-sm" href="/about.html">About Us</a>
+            <a class="text-white/85 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-bold text-sm" href="/clients.html">Our Clients</a>
+            <a class="text-white/85 hover:text-white hover:bg-white/10 transition-all px-3 py-2 rounded-lg font-bold text-sm" href="/contact.html">Contact</a>
+            <a class="bg-safety-lime text-primary font-bold px-8 py-3 rounded-full active:scale-95 duration-200 hover:bg-white hover:text-primary transition-all text-sm uppercase tracking-wider" href="tel:+919819977940">Call Now</a>
+        </nav>
+        <button class="md:hidden p-2 text-white active:scale-95 duration-200" id="drawer-toggle">
+            <span class="material-symbols-outlined text-[32px]">menu</span>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity" id="drawer-overlay"></div>
+    
+    <!-- NavigationDrawer -->
+    <aside class="fixed inset-y-0 left-0 w-80 z-[60] bg-white flex flex-col h-full shadow-2xl -translate-x-full transition-all duration-300 ease-in-out" id="drawer">
+        <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+            <div class="font-bold text-deep-forest text-lg">Ideal Management Services</div>
+            <button class="p-2 text-slate-600 hover:text-red-500" id="drawer-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col p-6 gap-4">
+            <a class="text-slate-800 font-bold hover:text-deep-forest transition-colors" href="/index.html">Home</a>
+            <a class="text-slate-800 font-bold hover:text-deep-forest transition-colors" href="/services.html">Services</a>
+            <a class="text-slate-800 font-bold hover:text-deep-forest transition-colors" href="/about.html">About Us</a>
+            <a class="text-slate-800 font-bold hover:text-deep-forest transition-colors" href="/clients.html">Our Clients</a>
+            <a class="text-slate-800 font-bold hover:text-deep-forest transition-colors" href="/contact.html">Contact</a>
+            <a class="mt-4 bg-deep-forest text-white text-center font-bold py-3 rounded-xl hover:bg-opacity-90 transition-all" href="tel:+919819977940">Call Now</a>
+        </nav>
+    </aside>
+
+    <!-- Page Header Hero -->
+    <div class="bg-gradient-to-br from-[#00361a] to-[#1A4D2E] text-white py-16 px-6 relative overflow-hidden border-b-4 border-[#ecd47c] shadow-lg">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-70"></div>
+        <div class="max-w-[850px] mx-auto text-center relative z-10 space-y-4">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">Customer Complaint Form</h1>
+            <p class="text-slate-200 font-medium max-w-2xl mx-auto text-base md:text-lg">
+                Please fill in the details below and our support team will contact you as soon as possible.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-[850px] w-full mx-auto px-4 py-12">
+        <form id="complaintForm" class="bg-white shadow-xl rounded-[2rem] border border-slate-100 overflow-hidden" enctype="multipart/form-data">
+            
+            <!-- Form Body -->
+            <div class="p-6 md:p-12 space-y-10">
+                
+                <!-- Section 1: Customer Information -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <span class="material-symbols-outlined text-deep-forest bg-slate-50 p-2 rounded-xl">person</span>
+                        <h2 class="text-xl font-bold text-slate-800">Customer Information</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Full Name -->
+                        <div class="space-y-2">
+                            <label for="fullName" class="block text-sm font-semibold text-slate-700">Full Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all" placeholder="Enter your full name" />
+                        </div>
+                        
+                        <!-- Company Name -->
+                        <div class="space-y-2">
+                            <label for="companyName" class="block text-sm font-semibold text-slate-700">Company Name <span class="text-slate-400 font-normal">(Optional)</span></label>
+                            <input type="text" id="companyName" name="companyName" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all" placeholder="Enter company name" />
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="space-y-2">
+                            <label for="mobile" class="block text-sm font-semibold text-slate-700">Mobile Number <span class="text-red-500">*</span></label>
+                            <input type="tel" id="mobile" name="mobile" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all" placeholder="10-digit mobile number" />
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="space-y-2">
+                            <label for="email" class="block text-sm font-semibold text-slate-700">Email Address <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all" placeholder="Enter your email address" />
+                        </div>
+                    </div>
+
+                    <!-- Property Address -->
+                    <div class="space-y-2">
+                        <label for="address" class="block text-sm font-semibold text-slate-700">Property / Service Address <span class="text-red-500">*</span></label>
+                        <textarea id="address" name="address" required rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all" placeholder="Enter property address where service was rendered"></textarea>
+                    </div>
+                </div>
+
+                <!-- Section 2: Complaint Details -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <span class="material-symbols-outlined text-deep-forest bg-slate-50 p-2 rounded-xl">report_problem</span>
+                        <h2 class="text-xl font-bold text-slate-800">Complaint Details</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Service Type -->
+                        <div class="space-y-2">
+                            <label for="serviceType" class="block text-sm font-semibold text-slate-700">Service Type <span class="text-red-500">*</span></label>
+                            <select id="serviceType" name="serviceType" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all">
+                                <option value="" disabled selected>Select service type</option>
+                                <option value="Pest Control">Pest Control</option>
+                                <option value="Housekeeping">Housekeeping</option>
+                                <option value="Facility Management">Facility Management</option>
+                                <option value="Security Services">Security Services</option>
+                                <option value="Deep Cleaning">Deep Cleaning</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Complaint Category -->
+                        <div class="space-y-2">
+                            <label for="category" class="block text-sm font-semibold text-slate-700">Complaint Category <span class="text-red-500">*</span></label>
+                            <select id="category" name="category" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all">
+                                <option value="" disabled selected>Select category</option>
+                                <option value="Service Quality">Service Quality</option>
+                                <option value="Staff Behaviour">Staff Behaviour</option>
+                                <option value="Delay in Service">Delay in Service</option>
+                                <option value="Billing Issue">Billing Issue</option>
+                                <option value="Safety Concern">Safety Concern</option>
+                                <option value="General Complaint">General Complaint</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Priority -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Priority <span class="text-red-500">*</span></label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex items-center gap-2 cursor-pointer transition-colors relative">
+                                    <input type="radio" name="priority" value="Low" checked class="text-deep-forest focus:ring-deep-forest" />
+                                    <span class="text-sm font-medium text-slate-700">Low</span>
+                                </label>
+                                <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex items-center gap-2 cursor-pointer transition-colors relative">
+                                    <input type="radio" name="priority" value="Medium" class="text-deep-forest focus:ring-deep-forest" />
+                                    <span class="text-sm font-medium text-slate-700">Medium</span>
+                                </label>
+                                <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex items-center gap-2 cursor-pointer transition-colors relative">
+                                    <input type="radio" name="priority" value="High" class="text-deep-forest focus:ring-deep-forest" />
+                                    <span class="text-sm font-medium text-slate-700">High</span>
+                                </label>
+                                <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex items-center gap-2 cursor-pointer transition-colors relative">
+                                    <input type="radio" name="priority" value="Urgent" class="text-deep-forest focus:ring-deep-forest" />
+                                    <span class="text-sm font-medium text-slate-700 text-red-600 font-bold">Urgent</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Preferred Contact Method -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Preferred Contact Method <span class="text-red-500">*</span></label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer transition-colors text-center">
+                                    <input type="radio" name="contactMethod" value="Phone" checked class="text-deep-forest focus:ring-deep-forest mb-1" />
+                                    <span class="text-xs font-semibold text-slate-700">Phone</span>
+                                </label>
+                                <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer transition-colors text-center">
+                                    <input type="radio" name="contactMethod" value="Email" class="text-deep-forest focus:ring-deep-forest mb-1" />
+                                    <span class="text-xs font-semibold text-slate-700">Email</span>
+                                </label>
+                                <label class="border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer transition-colors text-center">
+                                    <input type="radio" name="contactMethod" value="WhatsApp" class="text-deep-forest focus:ring-deep-forest mb-1" />
+                                    <span class="text-xs font-semibold text-slate-700">WhatsApp</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="space-y-2">
+                        <label for="subject" class="block text-sm font-semibold text-slate-700">Complaint Subject <span class="text-red-500">*</span></label>
+                        <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all" placeholder="Summarize the issue briefly" />
+                    </div>
+
+                    <!-- Description -->
+                    <div class="space-y-2">
+                        <label for="description" class="block text-sm font-semibold text-slate-700">Complaint Description <span class="text-red-500">*</span></label>
+                        <textarea id="description" name="description" required rows="5" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all" placeholder="Provide detailed description of the complaint..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Section 3: Image Uploads -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
+                        <span class="material-symbols-outlined text-deep-forest bg-slate-50 p-2 rounded-xl">image</span>
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-800">Upload Supporting Images</h2>
+                            <p class="text-xs text-slate-400 font-medium">Max 5 images. JPG, PNG or WEBP up to 10MB each.</p>
+                        </div>
+                    </div>
+
+                    <!-- File Dropzone -->
+                    <div id="dropzone" class="border-2 border-dashed border-slate-200 hover:border-deep-forest/50 bg-slate-50 hover:bg-slate-100/50 rounded-2xl p-8 flex flex-col items-center justify-center cursor-pointer transition-all">
+                        <input type="file" id="imageInput" name="images" multiple accept="image/jpeg,image/png,image/webp" class="hidden" />
+                        <span class="material-symbols-outlined text-4xl text-slate-400 mb-2">cloud_upload</span>
+                        <p class="text-sm font-semibold text-slate-700">Drag & drop files here or click to upload</p>
+                        <p class="text-xs text-slate-400 mt-1">PNG, JPG, WEBP formats only (Max 10MB)</p>
+                    </div>
+
+                    <!-- Uploaded Previews Container -->
+                    <div id="previews" class="grid grid-cols-2 sm:grid-cols-5 gap-4"></div>
+                </div>
+
+                <!-- Spam Protection & Declaration -->
+                <div class="border-t border-slate-100 pt-8 space-y-6">
+                    <!-- Turnstile -->
+                    <div class="flex justify-center">
+                        <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light"></div>
+                    </div>
+
+                    <!-- Declaration -->
+                    <label class="flex items-start gap-3 cursor-pointer p-4 bg-slate-50 border border-slate-100 rounded-2xl select-none">
+                        <input type="checkbox" id="declaration" name="declaration" required value="true" class="mt-1 rounded text-deep-forest focus:ring-deep-forest" />
+                        <span class="text-sm font-medium text-slate-600 leading-relaxed">
+                            I confirm that the information provided above is accurate.
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Error Banner -->
+            <div id="errorBanner" class="hidden mx-6 md:mx-12 p-4 bg-red-50 border border-red-200 text-red-700 text-sm font-bold rounded-2xl flex items-center gap-2">
+                <span class="material-symbols-outlined shrink-0">error</span>
+                <span id="errorMessage">Please check the fields and try again.</span>
+            </div>
+
+            <!-- Form Footer / Submit Button -->
+            <div class="bg-slate-50 border-t border-slate-100 p-6 md:p-12 flex justify-end">
+                <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-gradient-to-r from-[#ffe89e] via-[#ecd47c] to-[#a37e2c] text-[#00210e] font-extrabold px-12 py-4 rounded-xl shadow-lg hover:shadow-xl active:scale-95 duration-200 transition-all flex items-center justify-center gap-3 text-lg">
+                    <span id="btnText">Submit Complaint</span>
+                    <span id="spinner" class="hidden animate-spin h-5 w-5 border-2 border-[#00210e] border-t-transparent rounded-full"></span>
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-[2rem] shadow-2xl max-w-lg w-full overflow-hidden border border-slate-100 animate-[bounce_0.5s_ease-in-out_1]">
+            <div class="bg-gradient-to-br from-[#00361a] to-[#1A4D2E] text-white p-8 text-center border-b-4 border-[#ecd47c]">
+                <div class="w-16 h-16 bg-safety-lime/10 border-2 border-safety-lime text-safety-lime rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="material-symbols-outlined text-4xl">check_circle</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight">Complaint Submitted Successfully</h3>
+            </div>
+            <div class="p-8 space-y-6">
+                <p class="text-slate-600 text-center leading-relaxed text-sm md:text-base">
+                    Thank you for contacting Ideal Management Services.<br>Your complaint has been successfully registered.
+                </p>
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-5 text-center">
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Your Complaint Reference Number</span>
+                    <span id="successRefId" class="text-2xl font-extrabold text-deep-forest tracking-wider font-mono">IMS-20260707-0001</span>
+                </div>
+                <p class="text-xs text-slate-400 text-center leading-relaxed">
+                    Our support team will review your complaint and contact you shortly. A confirmation copy has also been sent to your email.
+                </p>
+                <button onclick="window.location.href='/index.html'" class="w-full bg-deep-forest text-white py-4 rounded-xl font-bold hover:bg-opacity-95 transition-all text-center">
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#002f47] text-white py-16 px-6 relative z-10 border-t border-white/5 mt-20">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white">Ideal Management Services</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Since 2016, Ideal Management Service has been diligently providing unparalleled pest control services across PAN India.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#1dbf53] hover:text-white transition-all flex items-center justify-center text-slate-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#1dbf53] hover:text-white transition-all flex items-center justify-center text-slate-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 hover:bg-[#1dbf53] hover:text-white transition-all flex items-center justify-center text-slate-400">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white">Our Services</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-white text-sm hover:text-[#1dbf53] transition-colors"><a href="/services.html">Comprehensive Pest Control Services</a></h4>
+                            <p class="text-xs text-slate-400 mt-1">Technical Excellence and Ongoing Support</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm hover:text-[#1dbf53] transition-colors"><a href="/services.html">Diverse Range of Facilities and Expertise</a></h4>
+                            <p class="text-xs text-slate-400 mt-1">We are proud to offer a range of exceptional services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 3 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white">Quick Links</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-400 font-medium">
+                        <li><a href="/index.html" class="hover:text-[#1dbf53] hover:underline transition-all">Home</a></li>
+                        <li><a href="/about.html" class="hover:text-[#1dbf53] hover:underline transition-all">About</a></li>
+                        <li><a href="/services.html" class="hover:text-[#1dbf53] hover:underline transition-all">Services</a></li>
+                        <li><a href="/clients.html" class="hover:text-[#1dbf53] hover:underline transition-all">Our Clients</a></li>
+                        <li><a href="/contact.html" class="hover:text-[#1dbf53] hover:underline transition-all">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white">Have a Question?</h3>
+                        <div class="w-12 h-1 bg-[#1dbf53] mt-2"></div>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0 mt-0.5">map</span>
+                            <span>Head Office: Office 09, Shubh, QueensPark, opp AR Hotel Miraroad East-401107</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0 mt-0.5">map</span>
+                            <span>Branches: Mumbai, Maharashtra, Gujrat, Banglore, Chennai, Goa, Hyderbad</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0">call</span>
+                            <a href="tel:+919819977940" class="hover:text-[#1dbf53] transition-colors">+91 9819977940</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-[20px] text-[#1dbf53] shrink-0">mail</span>
+                            <a href="mailto:mayur.patil@idealmanagementservices.com" class="hover:text-[#1dbf53] transition-colors break-all">mayur.patil@idealmanagementservices.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-xs md:text-sm text-slate-500 tracking-wider flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>Copyright &copy; 2026 Ideal Management Services. All Rights Reserved.</div>
+                <div>Powered by <a href="https://kaalvion.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-400 hover:text-[#1dbf53] transition-colors">Kaalvion</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation Bar (Mobile only) -->
+    <nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-white flex justify-around items-center h-16 px-2 shadow-[0px_-4px_20px_rgba(26,77,46,0.06)] border-t border-slate-200">
+        <a class="flex flex-col items-center justify-center text-slate-600 opacity-70 hover:opacity-100 transition-all" href="/services.html">
+            <span class="material-symbols-outlined">shield</span>
+            <span class="text-[10px] font-semibold">Services</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-600 opacity-70 hover:opacity-100 transition-all" href="/contact.html">
+            <span class="material-symbols-outlined">request_quote</span>
+            <span class="text-[10px] font-semibold">Get Quote</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-600 opacity-70 hover:opacity-100 transition-all" href="/about.html">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] font-semibold">About Us</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-600 opacity-70 hover:opacity-100 transition-all" href="tel:+919819977940">
+            <span class="material-symbols-outlined">emergency_home</span>
+            <span class="text-[10px] font-semibold">Emergency</span>
+        </a>
+    </nav>
+
+    <!-- Client-side Logic -->
+    <script>
+        // Drawer toggle
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        const toggle = document.getElementById('drawer-toggle');
+        const close = document.getElementById('drawer-close');
+
+        function toggleDrawer() {
+            drawer.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        toggle.addEventListener('click', toggleDrawer);
+        close.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+
+        // Upload Preview Logic
+        const imageInput = document.getElementById('imageInput');
+        const dropzone = document.getElementById('dropzone');
+        const previewsContainer = document.getElementById('previews');
+        let selectedFiles = [];
+
+        dropzone.addEventListener('click', () => imageInput.click());
+
+        // Drag and drop handlers
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropzone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropzone.classList.add('border-deep-forest', 'bg-slate-100/50');
+            }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropzone.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropzone.classList.remove('border-deep-forest', 'bg-slate-100/50');
+            }, false);
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        });
+
+        imageInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            const list = Array.from(files);
+            
+            // Check size, format and limit
+            for (let file of list) {
+                if (selectedFiles.length >= 5) {
+                    showError("You can upload a maximum of 5 images.");
+                    return;
+                }
+                
+                if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
+                    showError("Only JPG, PNG and WEBP images are allowed.");
+                    continue;
+                }
+                
+                if (file.size > 10 * 1024 * 1024) { // 10MB
+                    showError(`Image "${file.name}" exceeds the 10MB limit.`);
+                    continue;
+                }
+                
+                selectedFiles.push(file);
+            }
+            
+            renderPreviews();
+        }
+
+        function renderPreviews() {
+            previewsContainer.innerHTML = '';
+            selectedFiles.forEach((file, index) => {
+                const reader = new FileReader();
+                const card = document.createElement('div');
+                card.className = "relative bg-slate-100 border border-slate-200 rounded-xl overflow-hidden aspect-square flex items-center justify-center";
+                
+                reader.onload = (e) => {
+                    card.innerHTML = `
+                        <img src="${e.target.result}" class="w-full h-full object-cover" />
+                        <button type="button" onclick="removeFile(${index})" class="absolute top-1 right-1 w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center hover:bg-red-600 transition-colors shadow">
+                            <span class="material-symbols-outlined text-xs">close</span>
+                        </button>
+                    `;
+                };
+                reader.readAsDataURL(file);
+                previewsContainer.appendChild(card);
+            });
+        }
+
+        window.removeFile = function(index) {
+            selectedFiles.splice(index, 1);
+            renderPreviews();
+        };
+
+        // Form Submit
+        const form = document.getElementById('complaintForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const spinner = document.getElementById('spinner');
+        const errorBanner = document.getElementById('errorBanner');
+        const errorMessage = document.getElementById('errorMessage');
+        const successModal = document.getElementById('successModal');
+        const successRefId = document.getElementById('successRefId');
+
+        function showError(msg) {
+            errorMessage.textContent = msg;
+            errorBanner.classList.remove('hidden');
+            errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function hideError() {
+            errorBanner.classList.add('hidden');
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            hideError();
+
+            // Validate standard inputs
+            const fullName = document.getElementById('fullName').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const description = document.getElementById('description').value.trim();
+            
+            if (!fullName || !mobile || !email || !address || !subject || !description) {
+                showError("Please fill in all required fields.");
+                return;
+            }
+
+            // Mobile validation (10 digit)
+            const cleanMobile = mobile.replace(/\s+/g, '');
+            if (!/^[0-9]{10}$/.test(cleanMobile)) {
+                showError("Please enter a valid 10-digit mobile number.");
+                return;
+            }
+
+            // Email validation
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showError("Please enter a valid email address.");
+                return;
+            }
+
+            // Declaration
+            const declaration = document.getElementById('declaration').checked;
+            if (!declaration) {
+                showError("You must check the declaration box to proceed.");
+                return;
+            }
+
+            // Disable multiple submissions
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            btnText.textContent = "Registering...";
+            spinner.classList.remove('hidden');
+
+            const formData = new FormData(form);
+            
+            // Re-populate images correctly
+            formData.delete('images');
+            selectedFiles.forEach(file => {
+                formData.append('images', file);
+            });
+
+            try {
+                const response = await fetch('/api/complaint', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Reset form and files
+                    form.reset();
+                    selectedFiles = [];
+                    renderPreviews();
+                    
+                    // Show success modal
+                    successRefId.textContent = result.referenceId;
+                    successModal.classList.remove('hidden');
+                    successModal.classList.add('flex');
+                } else {
+                    showError(result.message || "Failed to register complaint. Please try again.");
+                }
+            } catch (err) {
+                console.error("Submission error:", err);
+                showError("An error occurred. Please check your network and try again.");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                btnText.textContent = "Submit Complaint";
+                spinner.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
