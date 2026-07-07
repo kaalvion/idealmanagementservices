@@ -4,12 +4,29 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "!(node_modules|dist|build)/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*",
+      "exclude": "server.js",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/complaint",
       "dest": "server.js"
+    },
+    {
+      "src": "/feedback",
+      "dest": "/feedback/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
