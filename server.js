@@ -185,13 +185,7 @@ app.post('/api/complaint', (req, res) => {
                 return res.status(400).json({ success: false, message: 'Please enter a valid 10-digit mobile number.' });
             }
 
-            // Turnstile Validation
-            if (process.env.TURNSTILE_SECRET_KEY) {
-                const isHuman = await verifyTurnstile(turnstileToken, req.ip);
-                if (!isHuman) {
-                    return res.status(400).json({ success: false, message: 'Spam verification failed. Please try again.' });
-                }
-            }
+
 
             const referenceId = generateReferenceId();
             const submissionTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
