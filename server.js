@@ -117,7 +117,10 @@ const getTransporter = async () => {
             host: host,
             port: port,
             secure: secure,
-            auth: { user, pass }
+            auth: { user, pass },
+            tls: {
+                rejectUnauthorized: false
+            }
         });
     } else {
         console.warn("WARNING: SMTP credentials not set. Falling back to console-logging mock transporter.");
@@ -316,10 +319,12 @@ app.post('/api/complaint', (req, res) => {
             </html>
             `;
 
+            const adminEmail = process.env.ADMIN_EMAIL || 'solutions@idealmanagementservices.com';
+
             // Send Admin Email
             const adminMailOptions = {
-                from: process.env.EMAIL_FROM || '"IMS Support System" <support@idealmanagementservices.com>',
-                to: 'swayamthakur369@gmail.com',
+                from: process.env.EMAIL_FROM || '"IMS Support System" <solutions@idealmanagementservices.com>',
+                to: adminEmail,
                 subject: `New Customer Complaint - ${subject}`,
                 html: adminEmailHtml,
                 attachments: attachments
@@ -327,7 +332,7 @@ app.post('/api/complaint', (req, res) => {
 
             // Send Customer Confirmation Email
             const customerMailOptions = {
-                from: process.env.EMAIL_FROM || '"IMS Support" <support@idealmanagementservices.com>',
+                from: process.env.EMAIL_FROM || '"IMS Support" <solutions@idealmanagementservices.com>',
                 to: email,
                 subject: `Complaint Registered - ${referenceId}`,
                 html: customerEmailHtml
@@ -350,7 +355,7 @@ app.post('/api/complaint', (req, res) => {
             console.error("Email sending failed:", mailErr);
             return res.status(500).json({
                 success: false,
-                message: 'Complaint registered but email notification failed. Please contact support.'
+                message: `Complaint registered but email notification failed: ${mailErr.message || mailErr}`
             });
         }
     });
