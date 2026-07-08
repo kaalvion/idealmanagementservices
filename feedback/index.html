@@ -205,6 +205,13 @@
                             <select id="serviceType" name="serviceType" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-deep-forest focus:ring-2 focus:ring-deep-forest/20 transition-all">
                                 <option value="" disabled selected>Select service type</option>
                                 <option value="Pest Control">Pest Control</option>
+                                <option value="Cockroach Management">Cockroach Management</option>
+                                <option value="Rodent Management">Rodent Management</option>
+                                <option value="Bedbugs Management">Bedbugs Management</option>
+                                <option value="Mosquito Management">Mosquito Management</option>
+                                <option value="Termite Management">Termite Management</option>
+                                <option value="Bird Netting Management">Bird Netting Management</option>
+                                <option value="Invisible Grill Installation">Invisible Grill Installation</option>
                                 <option value="Housekeeping">Housekeeping</option>
                                 <option value="Facility Management">Facility Management</option>
                                 <option value="Security Services">Security Services</option>
@@ -284,27 +291,6 @@
                     </div>
                 </div>
 
-                <!-- Section 3: Image Uploads -->
-                <div class="space-y-6">
-                    <div class="flex items-center gap-3 border-b border-slate-100 pb-3">
-                        <span class="material-symbols-outlined text-deep-forest bg-slate-50 p-2 rounded-xl">image</span>
-                        <div>
-                            <h2 class="text-xl font-bold text-slate-800">Upload Supporting Images</h2>
-                            <p class="text-xs text-slate-400 font-medium">Max 5 images. JPG, PNG or WEBP up to 10MB each.</p>
-                        </div>
-                    </div>
-
-                    <!-- File Dropzone -->
-                    <div id="dropzone" class="border-2 border-dashed border-slate-200 hover:border-deep-forest/50 bg-slate-50 hover:bg-slate-100/50 rounded-2xl p-8 flex flex-col items-center justify-center cursor-pointer transition-all">
-                        <input type="file" id="imageInput" name="images" multiple accept="image/jpeg,image/png,image/webp" class="hidden" />
-                        <span class="material-symbols-outlined text-4xl text-slate-400 mb-2">cloud_upload</span>
-                        <p class="text-sm font-semibold text-slate-700">Drag & drop files here or click to upload</p>
-                        <p class="text-xs text-slate-400 mt-1">PNG, JPG, WEBP formats only (Max 10MB)</p>
-                    </div>
-
-                    <!-- Uploaded Previews Container -->
-                    <div id="previews" class="grid grid-cols-2 sm:grid-cols-5 gap-4"></div>
-                </div>
 
                 <!-- Spam Protection & Declaration -->
                 <div class="border-t border-slate-100 pt-8 space-y-6">
@@ -496,89 +482,7 @@
         close.addEventListener('click', toggleDrawer);
         overlay.addEventListener('click', toggleDrawer);
 
-        // Upload Preview Logic
-        const imageInput = document.getElementById('imageInput');
-        const dropzone = document.getElementById('dropzone');
-        const previewsContainer = document.getElementById('previews');
-        let selectedFiles = [];
 
-        dropzone.addEventListener('click', () => imageInput.click());
-
-        // Drag and drop handlers
-        ['dragenter', 'dragover'].forEach(eventName => {
-            dropzone.addEventListener(eventName, (e) => {
-                e.preventDefault();
-                dropzone.classList.add('border-deep-forest', 'bg-slate-100/50');
-            }, false);
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-            dropzone.addEventListener(eventName, (e) => {
-                e.preventDefault();
-                dropzone.classList.remove('border-deep-forest', 'bg-slate-100/50');
-            }, false);
-        });
-
-        dropzone.addEventListener('drop', (e) => {
-            const dt = e.dataTransfer;
-            const files = dt.files;
-            handleFiles(files);
-        });
-
-        imageInput.addEventListener('change', (e) => {
-            handleFiles(e.target.files);
-        });
-
-        function handleFiles(files) {
-            const list = Array.from(files);
-            
-            // Check size, format and limit
-            for (let file of list) {
-                if (selectedFiles.length >= 5) {
-                    showError("You can upload a maximum of 5 images.");
-                    return;
-                }
-                
-                if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-                    showError("Only JPG, PNG and WEBP images are allowed.");
-                    continue;
-                }
-                
-                if (file.size > 10 * 1024 * 1024) { // 10MB
-                    showError(`Image "${file.name}" exceeds the 10MB limit.`);
-                    continue;
-                }
-                
-                selectedFiles.push(file);
-            }
-            
-            renderPreviews();
-        }
-
-        function renderPreviews() {
-            previewsContainer.innerHTML = '';
-            selectedFiles.forEach((file, index) => {
-                const reader = new FileReader();
-                const card = document.createElement('div');
-                card.className = "relative bg-slate-100 border border-slate-200 rounded-xl overflow-hidden aspect-square flex items-center justify-center";
-                
-                reader.onload = (e) => {
-                    card.innerHTML = `
-                        <img src="${e.target.result}" class="w-full h-full object-cover" />
-                        <button type="button" onclick="removeFile(${index})" class="absolute top-1 right-1 w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center hover:bg-red-600 transition-colors shadow">
-                            <span class="material-symbols-outlined text-xs">close</span>
-                        </button>
-                    `;
-                };
-                reader.readAsDataURL(file);
-                previewsContainer.appendChild(card);
-            });
-        }
-
-        window.removeFile = function(index) {
-            selectedFiles.splice(index, 1);
-            renderPreviews();
-        };
 
         // Form Submit
         const form = document.getElementById('complaintForm');
@@ -645,12 +549,6 @@
 
             const formData = new FormData(form);
             
-            // Re-populate images correctly
-            formData.delete('images');
-            selectedFiles.forEach(file => {
-                formData.append('images', file);
-            });
-
             try {
                 const response = await fetch('/api/complaint', {
                     method: 'POST',
@@ -660,10 +558,8 @@
                 const result = await response.json();
                 
                 if (result.success) {
-                    // Reset form and files
+                    // Reset form
                     form.reset();
-                    selectedFiles = [];
-                    renderPreviews();
                     
                     // Show success modal
                     successRefId.textContent = result.referenceId;
