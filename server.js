@@ -339,12 +339,33 @@ app.post('/api/complaint', (req, res) => {
             };
 
             // Execute email sending
-            await Promise.all([
-                transporter.sendMail(adminMailOptions),
-                transporter.sendMail(customerMailOptions)
-            ]);
+            let adminMailSent = false;
+            let customerMailSent = false;
+            let emailError = null;
 
-            console.log(`Complaint registered and emails sent successfully: ${referenceId}`);
+            try {
+                await transporter.sendMail(adminMailOptions);
+                adminMailSent = true;
+            } catch (err) {
+                console.error("Admin email failed:", err);
+                emailError = err;
+            }
+
+            // Only attempt to send customer confirmation if admin email succeeded (or try anyway)
+            try {
+                await transporter.sendMail(customerMailOptions);
+                customerMailSent = true;
+            } catch (err) {
+                console.error("Customer confirmation email failed:", err);
+                // Do not overwrite emailError if admin email failed
+                if (!emailError) emailError = err;
+            }
+
+            if (!adminMailSent) {
+                throw new Error(`Admin notification failed: ${emailError ? emailError.message : 'Unknown error'}`);
+            }
+
+            console.log(`Complaint registered successfully: ${referenceId}`);
             return res.status(200).json({
                 success: true,
                 message: 'Complaint submitted successfully.',
