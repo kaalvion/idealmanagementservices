@@ -4,6 +4,7 @@ const multer = require('multer');
 const nodemailer = require('nodemailer');
 const path = require('path');
 const https = require('https');
+const { kv } = require('@vercel/kv');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -31,22 +32,25 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files from the root
 app.use(express.static(__dirname));
 
-// Keep track of ticket counter per day
-let lastDate = '';
-let counter = 0;
-
-function generateReferenceId() {
+async function generateReferenceId() {
     const now = new Date();
     const yyyy = now.getFullYear();
     const mm = String(now.getMonth() + 1).padStart(2, '0');
     const dd = String(now.getDate()).padStart(2, '0');
     const dateStr = `${yyyy}${mm}${dd}`;
 
-    if (dateStr !== lastDate) {
-        lastDate = dateStr;
-        counter = 1;
-    } else {
-        counter++;
+    const key = `complaint_counter:${dateStr}`;
+    let counter = 1;
+
+    try {
+        // INCR increments the counter. If the key doesn't exist, it sets it to 1 and returns 1.
+        counter = await kv.incr(key);
+        // Expire the key after 48 hours to keep the database clean
+        await kv.expire(key, 172800);
+    } catch (error) {
+        console.error("Failed to fetch/increment counter from Vercel KV, falling back to random/timestamp:", error);
+        // Fallback in case KV database connection is down or not set up
+        counter = Math.floor(1000 + Math.random() * 9000);
     }
 
     const counterStr = String(counter).padStart(4, '0');
@@ -187,7 +191,7 @@ app.post('/api/complaint', (req, res) => {
 
 
 
-            const referenceId = generateReferenceId();
+            const referenceId = await generateReferenceId();
             const submissionTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
             // Prepare attachments
