@@ -5,9 +5,24 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const https = require('https');
 const { kv } = require('@vercel/kv');
+const Redis = require('ioredis');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Initialize a Redis client if KV_URL or KV_REDIS_URL is present
+let redisClient = null;
+const redisUrl = process.env.KV_URL || process.env.KV_REDIS_URL;
+if (redisUrl) {
+    try {
+        redisClient = new Redis(redisUrl);
+        redisClient.on('error', (err) => {
+            console.error('Redis client connection error:', err.message);
+        });
+    } catch (err) {
+        console.error('Failed to initialize ioredis client:', err.message);
+    }
+}
 
 // Setup multer in-memory storage for handling up to 5 image uploads
 const storage = multer.memoryStorage();
@@ -39,20 +54,35 @@ async function generateReferenceId() {
     const dd = String(now.getDate()).padStart(2, '0');
     const dateStr = `${yyyy}${mm}${dd}`;
 
-    console.log("DEBUG: Available KV/REDIS environment variables:", Object.keys(process.env).filter(k => k.includes('KV') || k.includes('REDIS')));
-
     const key = `complaint_counter:${dateStr}`;
     let counter = 1;
+    let success = false;
 
-    try {
-        // INCR increments the counter. If the key doesn't exist, it sets it to 1 and returns 1.
-        counter = await kv.incr(key);
-        // Expire the key after 48 hours to keep the database clean
-        await kv.expire(key, 172800);
-    } catch (error) {
-        console.error("Failed to fetch/increment counter from Vercel KV, falling back to random/timestamp:", error);
-        console.error("Connection error details:", error.message);
-        // Fallback in case KV database connection is down or not set up
+    // 1. Try using ioredis (direct Redis URL)
+    if (redisClient) {
+        try {
+            counter = await redisClient.incr(key);
+            await redisClient.expire(key, 172800); // 48 hours expiration
+            success = true;
+        } catch (error) {
+            console.error("ioredis incr failed:", error.message);
+        }
+    }
+
+    // 2. Try using @vercel/kv as fallback
+    if (!success) {
+        try {
+            counter = await kv.incr(key);
+            await kv.expire(key, 172800);
+            success = true;
+        } catch (error) {
+            console.error("@vercel/kv incr failed:", error.message);
+        }
+    }
+
+    // 3. Fallback to random if both database connections failed
+    if (!success) {
+        console.warn("Both Redis and Vercel KV failed. Falling back to random number.");
         counter = Math.floor(1000 + Math.random() * 9000);
     }
 
