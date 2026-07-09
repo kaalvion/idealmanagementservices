@@ -39,6 +39,8 @@ async function generateReferenceId() {
     const dd = String(now.getDate()).padStart(2, '0');
     const dateStr = `${yyyy}${mm}${dd}`;
 
+    console.log("DEBUG: Available KV/REDIS environment variables:", Object.keys(process.env).filter(k => k.includes('KV') || k.includes('REDIS')));
+
     const key = `complaint_counter:${dateStr}`;
     let counter = 1;
 
@@ -49,6 +51,7 @@ async function generateReferenceId() {
         await kv.expire(key, 172800);
     } catch (error) {
         console.error("Failed to fetch/increment counter from Vercel KV, falling back to random/timestamp:", error);
+        console.error("Connection error details:", error.message);
         // Fallback in case KV database connection is down or not set up
         counter = Math.floor(1000 + Math.random() * 9000);
     }
